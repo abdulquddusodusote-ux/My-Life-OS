@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Meniscus OS — Personal Life Operating System</title>
+  
+  <!-- PWA & Mobile Web App Capabilities -->
+  <meta name="theme-color" content="#FFFFFF" id="theme-color-meta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Meniscus OS">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+
+  <!-- Google Fonts: Lora (Display Serif), Inter (Clean Sans Body), IBM Plex Mono (Timers/Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Script CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)',
+            surface: 'var(--surface)',
+            'surface-sunken': 'var(--surface-sunken)',
+            ink: {
+              DEFAULT: 'var(--ink)',
+              soft: 'var(--ink-soft)',
+              faint: 'var(--ink-faint)',
+            },
+            cushion: {
+              DEFAULT: 'var(--cushion)',
+              soft: 'var(--cushion-soft)',
+            },
+            synovial: {
+              DEFAULT: 'var(--synovial)',
+              soft: 'var(--synovial-soft)',
+            },
+            'load-high': 'var(--load-high)',
+            'accent-amber': 'var(--accent-amber)',
+            line: 'var(--line)',
+          },
+          borderRadius: {
+            soft: 'var(--radius-soft)',
+            pill: 'var(--radius-pill)',
+          },
+          fontFamily: {
+            display: ['Lora', 'Georgia', 'serif'],
+            body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['IBM Plex Mono', 'monospace'],
+          },
+          boxShadow: {
+            card: '0 2px 12px -2px rgba(15, 23, 42, 0.04), 0 1px 4px -1px rgba(15, 23, 42, 0.02)',
+            floating: '0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- React 18 & ReactDOM 18 UMD (Zero Build Overhead) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  
+  <!-- Babel Standalone (In-browser JSX compilation) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Design Tokens Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-bg text-ink font-body antialiased transition-colors duration-200 min-h-screen selection:bg-cushion-soft selection:text-cushion">
+  <div id="root"></div>
+
+  <!-- Standalone Application Logic -->
+  <script type="text/babel" src="scripts.js"></script>
+</body>
+</html>
