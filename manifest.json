@@ -1,0 +1,9 @@
+{
+  "name": "MENISCUS OS",
+  "short_name": "MENISCUS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F8F6F0",
+  "theme_color": "#1C5450",
+  "description": "A calm personal planning instrument for time, tasks, and commitments."
+}
